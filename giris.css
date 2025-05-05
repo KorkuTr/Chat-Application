@@ -1,0 +1,52 @@
+/* Tüm sayfa ortalansın */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2f2f2;
+  }
+  
+  /* Dış çerçeve */
+  #grs-frm {
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Form düzeni */
+  #butonlar {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  /* Yazılar */
+  #butonlar p {
+    margin: 0;
+    font-weight: bold;
+  }
+  
+  /* Inputlar */
+  #butonlar input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+  }
+  
+  /* Buton */
+  #butonlar button {
+    padding: 12px;
+    background-color: #2196f3;
+    color: white;
+    font-size: 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3
+  

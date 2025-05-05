@@ -1,0 +1,63 @@
+.ilkSatirlar{
+    font-size: medium;
+    background-color:darkgray
+    font-family: 'Times New Roman', Times, serif;
+    /*konumlandırma */
+ display: inline-block;
+    position: relative;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin-top: 50px;
+    padding:12px 24px;
+    color: aquamarine;
+    /* ekstra */
+    cursor: pointer;
+    transition: all 0.4s ease;
+    box-shadow:  0 4px 6px;
+}
+h3{
+    text-align:center;
+    justify-content: center;
+    margin-top:10px;
+    padding-top: 10px;
+    
+}
+.button-container{
+    display:flex;
+    justify-content: center;  /* YATAY ortalama */
+    align-items: center;      /* DİKEY ortalama */
+    height: 20vh;            /* Sayfanın tamamı kadar yükseklik */
+    gap: 10px;                /* Butonlar arası boşluk */
+  margin-top: 40px;
+
+}
+#btn-1{
+    padding:10px 20px ;
+    margin-top: 25px;
+    text-align: center;
+    justify-content: center;
+align-items: center; 
+height: 40px;
+width: 150px;
+display: flex;
+background-color: aqua;
+writing-mode:unset;
+font-style: oblique;
+font-palette:initial;
+font-size: larger;
+}
+#btn-2{
+    padding:10px 20px ;
+    margin-top: 25px;
+    text-align: center;
+    justify-content: center;
+    height: 40px;
+    width: 150px;
+    display: flex;
+    background-color: aqua;
+    writing-mode:unset;
+font-style: oblique;
+font-palette:initial;
+font-size: larger;
+}
