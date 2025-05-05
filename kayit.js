@@ -3,11 +3,12 @@ document.addEventListener("DOMContentLoaded", function() {
     const form = document.getElementById("butonlar"); // "Document" değil "document" olacak
     const usernameInput = document.querySelector("input[name='username']");
     const passwordInput = document.querySelector("input[name='password']");
-    const emailInput = document.querySelector("input[name='email']"); // E-posta inputu eklendi
+    
+    // E-posta inputu eklendi
 
     // Form doğrulama fonksiyonu
     function validateForm() {
-        if (!usernameInput.value.trim() || !passwordInput.value.trim() || !emailInput.value.trim()) {
+        if (!usernameInput.value.trim() || !passwordInput.value.trim()) {
             alert("Lütfen tüm alanları doldurun!");
             return false;
         }
@@ -17,21 +18,11 @@ document.addEventListener("DOMContentLoaded", function() {
             return false;
         }
 
-        // Basit email kontrolü
-        if (!emailInput.value.includes('@')) {
-            alert("Geçerli bir e-posta adresi girin!");
-            return false;
-        }
-
-        return true;
-    }
-
     // Verileri localStorage'a kaydetme
     function saveFormData() {
         const userData = {
             username: usernameInput.value.trim(),
             password: passwordInput.value, // Gerçek uygulamada şifre hash'lenmeli
-            email: emailInput.value.trim(), // E-posta eklendi
             lastLogin: new Date().toISOString()
         };
 

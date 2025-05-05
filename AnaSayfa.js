@@ -52,9 +52,4 @@ document.addEventListener("DOMContentLoaded", function() {
     } else {
         console.warn("#Grs-Gndr id'li element bulunamadı");
     }
-
-
-/* kayıları alma kısmı */
-const form =document.getElementById("butonlar");
-
 });
