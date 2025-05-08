@@ -124,6 +124,49 @@ nav img {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
+.auth-buttons {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-left: 40px;
+}
+
+.auth-buttons a {
+    padding: 10px 24px;
+    font-size: 16px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s, color 0.3s, border 0.3s;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Giriş Butonu */
+.btn-login {
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+}
+
+.btn-login:hover {
+    background-color: #ffffff;
+    color: #2c3e50;
+}
+
+/* Kayıt Ol Butonu */
+.btn-signup {
+    background-color: #27ae60;
+    color: #ffffff;
+    border: 2px solid #27ae60;
+}
+
+.btn-signup:hover {
+    background-color: #ffffff;
+    color: #27ae60;
+}
+
+
+
 /* Footer */
 .footer {
     background-color: var(--dark-color);
