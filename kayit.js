@@ -1,28 +1,33 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Form elementini seç
-    const form = document.getElementById("butonlar"); // "Document" değil "document" olacak
+    // Form elements
+    const form = document.getElementById("butonlar");
     const usernameInput = document.querySelector("input[name='username']");
     const passwordInput = document.querySelector("input[name='password']");
-    
-    // E-posta inputu eklendi
+    const kodInput = document.querySelector("input[name='kod']");
 
-    // Form doğrulama fonksiyonu
+    // Form validation function
     function validateForm() {
-        if (!usernameInput.value.trim() || !passwordInput.value.trim()) {
+        // Check if fields are empty
+        if (!usernameInput.value.trim() || !passwordInput.value.trim() || !kodInput.value.trim()) {
             alert("Lütfen tüm alanları doldurun!");
             return false;
         }
 
+        // Check password length
         if (passwordInput.value.length < 6) {
             alert("Şifre en az 6 karakter olmalıdır!");
             return false;
         }
 
-    // Verileri localStorage'a kaydetme
+        return true;
+    }
+
+    // Save data to localStorage
     function saveFormData() {
         const userData = {
             username: usernameInput.value.trim(),
-            password: passwordInput.value, // Gerçek uygulamada şifre hash'lenmeli
+            password: passwordInput.value, // In real apps, password should be hashed
+            kod: kodInput.value.trim(),
             lastLogin: new Date().toISOString()
         };
 
@@ -33,25 +38,28 @@ document.addEventListener("DOMContentLoaded", function() {
         console.log("Kullanıcı verileri kaydedildi:", userData);
     }
 
-    // Form submit event listener
+    // Form submit handler
     if (form) {
         form.addEventListener("submit", function(e) {
             e.preventDefault();
             if (validateForm()) {
                 saveFormData();
                 alert("Başarıyla kayıt olundu!");
-                // Yönlendirme yapılabilir
+                // Redirect if needed
                 // window.location.href = "anasayfa.html";
             }
         });
     }
 
-    // "Zaten kayıtlı mısın" butonu için event listener
-    const kayitliBtn = document.querySelector(".btn-1");
-    if (kayitliBtn) {
-        kayitliBtn.addEventListener("click", function() {
-            // Giriş sayfasına yönlendirme
-            window.location.href = "giris.html";
+    // "Kayıt ol" button event listener
+    const kayitBtn = document.querySelector(".btn-2");
+    if (kayitBtn) {
+        kayitBtn.addEventListener("click", function() {
+            // Redirect to registration page
+            const target = kayitBtn.getAttribute("data-target");
+            if (target) {
+                window.location.href = target;
+            }
         });
     }
 });
